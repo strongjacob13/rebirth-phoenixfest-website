@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SubscribeForm from "./components/SubscribeForm";
 
 const experiences = [
   {
@@ -164,21 +165,7 @@ export default function Home() {
             <a className="update-button secondary" href="mailto:information@rebirth-phoenixfest.org?subject=Question%20about%20Rebirth%20Phoenixfest">Ask a question <span>↗</span></a>
           </div>
 
-          <form
-            className="subscribe-form"
-            action="mailto:information@rebirth-phoenixfest.org?subject=Subscribe%20me%20to%20Rebirth%20Phoenixfest%20updates"
-            method="post"
-            encType="text/plain"
-          >
-            <span className="tiny">EMAIL LIST</span>
-            <h3>Subscribe for updates.</h3>
-            <p>Join the update list for announcements from information@rebirth-phoenixfest.org.</p>
-            <label htmlFor="subscriber-email">Email address</label>
-            <div>
-              <input id="subscriber-email" name="email" type="email" placeholder="you@example.com" required />
-              <button type="submit">Subscribe <span>↗</span></button>
-            </div>
-          </form>
+          <SubscribeForm />
         </div>
       </section>
 

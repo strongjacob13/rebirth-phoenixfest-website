@@ -450,12 +450,19 @@ h1 em {
   color: var(--gold);
   margin-bottom: 10px;
 }
+.subscribe-form label span {
+  color: #ffe0ad;
+  letter-spacing: .04em;
+  text-transform: lowercase;
+}
 .subscribe-form div {
   display: flex;
   gap: 10px;
+  margin-bottom: 0;
 }
 .subscribe-form input {
   min-width: 0;
+  width: 100%;
   flex: 1;
   border: 1px solid #ffbd6f66;
   border-radius: 999px;
@@ -464,10 +471,18 @@ h1 em {
   color: var(--coal);
   font: inherit;
   outline: none;
+  margin-bottom: 18px;
 }
 .subscribe-form input:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 4px #ff6a0033;
+}
+.subscribe-form .hidden-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 .subscribe-form button {
   border: 0;
@@ -480,6 +495,19 @@ h1 em {
   cursor: pointer;
   white-space: nowrap;
   box-shadow: 0 0 28px #ff491155;
+}
+.subscribe-form button:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+.form-status {
+  min-height: 1.4em;
+  margin: 16px 0 0;
+  color: var(--gold);
+  font-size: 14px;
+}
+.form-status.error {
+  color: #ffb4a0;
 }
 .update-button {
   display: inline-flex;
