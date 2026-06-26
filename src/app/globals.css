@@ -406,6 +406,81 @@ h1 em {
 .tiny { display: block; margin-bottom: 35px; }
 .updates h2 { margin-bottom: 28px; }
 .updates p { max-width: 520px; margin: 0 auto 38px; line-height: 1.6; color: #ffe0ad; }
+.contact-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 1040px;
+  margin: 70px auto 0;
+  text-align: left;
+}
+.contact-panel > div,
+.subscribe-form {
+  border: 1px solid #ffbd6f55;
+  border-radius: 30px;
+  padding: 32px;
+  background: linear-gradient(135deg, #ffb00018, #ff260012 55%, #ffffff08);
+  box-shadow: 0 0 38px #ff340026, inset 0 0 0 1px #fff2d411;
+}
+.contact-panel h3 {
+  font-size: clamp(30px, 3vw, 48px);
+  line-height: .98;
+  letter-spacing: -.055em;
+  margin: 16px 0 18px;
+}
+.contact-panel p {
+  margin: 0 0 26px;
+  max-width: 100%;
+}
+.contact-panel a:not(.update-button) {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: #ff6a0088;
+  text-underline-offset: 4px;
+}
+.update-button.secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid #ffbd6f88;
+}
+.subscribe-form label {
+  display: block;
+  font: 650 11px/1 var(--font-geist-mono), monospace;
+  letter-spacing: .12em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.subscribe-form div {
+  display: flex;
+  gap: 10px;
+}
+.subscribe-form input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #ffbd6f66;
+  border-radius: 999px;
+  padding: 16px 18px;
+  background: #fff2d4;
+  color: var(--coal);
+  font: inherit;
+  outline: none;
+}
+.subscribe-form input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px #ff6a0033;
+}
+.subscribe-form button {
+  border: 0;
+  border-radius: 999px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, var(--gold), var(--flame) 48%, var(--ember));
+  color: var(--coal);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 0 28px #ff491155;
+}
 .update-button {
   display: inline-flex;
   background: linear-gradient(135deg, var(--gold), var(--flame) 48%, var(--ember));
@@ -483,6 +558,9 @@ footer small {
   .story-copy { margin-top: 160px; }
   .updates { padding: 110px 0; }
   .updates h2 { font-size: 18vw; }
+  .contact-panel { grid-template-columns: 1fr; margin-top: 48px; }
+  .contact-panel > div, .subscribe-form { padding: 24px; }
+  .subscribe-form div { flex-direction: column; }
   footer { grid-template-columns: 1fr 1fr; }
   footer p { grid-column: 1 / -1; grid-row: 2; }
   footer > div { justify-content: flex-start; grid-column: 1 / -1; grid-row: 3; }

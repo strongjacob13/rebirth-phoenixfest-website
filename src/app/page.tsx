@@ -68,6 +68,7 @@ export default function Home() {
           <a href="#flyer">Flyer</a>
           <a href="#experience">Experience</a>
           <a href="#symbols">Symbols</a>
+          <a href="#contact">Contact</a>
           <a className="nav-cta" href="#tickets">Tickets <span>↗</span></a>
         </nav>
       </header>
@@ -154,13 +155,37 @@ export default function Home() {
         <span className="tiny">MORE INFO & TICKETS</span>
         <h2>Rebirth-Phoenixfest.org<br /><em>is the portal.</em></h2>
         <p>March 20–22, 2027. Sunrise Valley Ranch, TX. Follow the fire for ticket updates, lineup announcements, and workshop details.</p>
-        <a className="update-button" href="mailto:?subject=Keep%20me%20posted%20about%20Rebirth%20Phoenixfest">Keep me posted <span>↗</span></a>
+
+        <div className="contact-panel" id="contact">
+          <div>
+            <span className="tiny">QUESTIONS</span>
+            <h3>Ask the Phoenixfest team.</h3>
+            <p>Email <a href="mailto:information@rebirth-phoenixfest.org">information@rebirth-phoenixfest.org</a> for questions about tickets, workshops, vending, volunteering, accessibility, and event updates.</p>
+            <a className="update-button secondary" href="mailto:information@rebirth-phoenixfest.org?subject=Question%20about%20Rebirth%20Phoenixfest">Ask a question <span>↗</span></a>
+          </div>
+
+          <form
+            className="subscribe-form"
+            action="mailto:information@rebirth-phoenixfest.org?subject=Subscribe%20me%20to%20Rebirth%20Phoenixfest%20updates"
+            method="post"
+            encType="text/plain"
+          >
+            <span className="tiny">EMAIL LIST</span>
+            <h3>Subscribe for updates.</h3>
+            <p>Join the update list for announcements from information@rebirth-phoenixfest.org.</p>
+            <label htmlFor="subscriber-email">Email address</label>
+            <div>
+              <input id="subscriber-email" name="email" type="email" placeholder="you@example.com" required />
+              <button type="submit">Subscribe <span>↗</span></button>
+            </div>
+          </form>
+        </div>
       </section>
 
       <footer className="wrap">
         <a className="brand" href="#top"><span className="brand-sun" /><span>REBIRTH<br />PHOENIXFEST</span></a>
         <p>OVER THE SPRING EQUINOX<br />MARCH 20–22, 2027 · SUNRISE VALLEY RANCH, TX</p>
-        <div><a href="#flyer">Flyer</a><a href="#experience">Experience</a><a href="#symbols">Symbols</a></div>
+        <div><a href="#flyer">Flyer</a><a href="#experience">Experience</a><a href="#symbols">Symbols</a><a href="mailto:information@rebirth-phoenixfest.org">Email</a></div>
         <small>© 2027 REBIRTH PHOENIXFEST · PYRAMID EVENTS</small>
       </footer>
     </main>
