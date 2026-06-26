@@ -108,7 +108,7 @@ export default function Home() {
       <section className="experience wrap" id="experience">
         <div className="section-kicker">THE EXPERIENCE</div>
         <div className="section-intro">
-          <h2>Music, art, workshops,<br /><i>and community.</i></h2>
+          <h2>Music, art, workshops,<br /><i className="community-accent">and community.</i></h2>
           <p>Built at the meeting point of ceremony, creative expression, and human connection, Phoenixfest is a place to lose track of time—and remember what matters.</p>
         </div>
         <div className="cards">

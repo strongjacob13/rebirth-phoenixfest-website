@@ -249,6 +249,10 @@ h1 em {
   color: var(--gold);
   text-shadow: 0 0 22px #ff491177;
 }
+.section-intro h2 .community-accent {
+  color: #c43a0a;
+  text-shadow: 0 0 16px #ff6a0055;
+}
 .section-intro p { font-size: 17px; line-height: 1.6; max-width: 390px; margin: 15px 0; color: #5b2b16; }
 
 .flyer {
