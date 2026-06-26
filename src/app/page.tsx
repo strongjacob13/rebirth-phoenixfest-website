@@ -1,7 +1,41 @@
+import Image from "next/image";
+
 const experiences = [
-  { number: "01", title: "Live Sound", text: "A genre-bending lineup built for discovery, release, and the kind of sets you talk about all year." },
-  { number: "02", title: "Immersive Art", text: "Large-scale installations, live making, and glowing worlds that transform as the night unfolds." },
-  { number: "03", title: "Collective Ritual", text: "Movement, wellness, food, and shared moments designed to bring us back to ourselves—and each other." },
+  {
+    number: "01",
+    icon: "♪",
+    title: "Music",
+    text: "Live sound, ceremony, dance, and late-night firelight for the spring equinox weekend.",
+  },
+  {
+    number: "02",
+    icon: "🎨",
+    title: "Art",
+    text: "Visionary art, color, sacred geometry, handmade worlds, and creative expression everywhere you turn.",
+  },
+  {
+    number: "03",
+    icon: "☼",
+    title: "Workshops",
+    text: "Movement, renewal, community practices, and spaces to regenerate ourselves together.",
+  },
+  {
+    number: "04",
+    icon: "🔥",
+    title: "Community",
+    text: "Gather around the fire with artists, builders, dreamers, and everyone ready to rise.",
+  },
+];
+
+const symbols = [
+  { mark: "🜁", title: "Air spiral", text: "breath, release, and fresh vision" },
+  { mark: "🌊", title: "Water wave", text: "flow, cleansing, and emotional renewal" },
+  { mark: "🌀", title: "Cosmic portal", text: "the threshold into rebirth" },
+  { mark: "☯", title: "Yin-yang sun", text: "balance, polarity, and integration" },
+  { mark: "☾", title: "Crescent moon", text: "dreams, cycles, and intuition" },
+  { mark: "☀", title: "Golden sun", text: "life force and equinox light" },
+  { mark: "𓂀", title: "Eye pyramid", text: "vision, wisdom, and Pyramid Events" },
+  { mark: "❤", title: "Phoenix heart", text: "love transmuted through flame" },
 ];
 
 function PhoenixMark() {
@@ -31,36 +65,77 @@ export default function Home() {
           <span>REBIRTH<br />PHOENIXFEST</span>
         </a>
         <nav aria-label="Main navigation">
+          <a href="#flyer">Flyer</a>
           <a href="#experience">Experience</a>
-          <a href="#story">Our story</a>
-          <a className="nav-cta" href="#updates">Get updates <span>↗</span></a>
+          <a href="#symbols">Symbols</a>
+          <a className="nav-cta" href="#tickets">Tickets <span>↗</span></a>
         </nav>
       </header>
 
       <section className="hero wrap" id="top">
-        <div className="eyebrow"><span /> A new gathering is taking flight</div>
-        <h1>RISE<br /><em>TOGETHER.</em></h1>
-        <p className="hero-copy">A new festival of sound, art, movement, and collective renewal. Come as you are. Leave a little more alive.</p>
-        <a className="circle-link" href="#experience" aria-label="Explore the festival"><span>Explore</span><b>↓</b></a>
+        <div className="eyebrow"><span /> Over the spring equinox</div>
+        <h1>REBIRTH<br /><em>PHOENIXFEST.</em></h1>
+        <p className="hero-copy">March 20–22, 2027 at Sunrise Valley Ranch, TX. Music, art, workshops, and community with Pyramid Events.</p>
+        <a className="circle-link" href="#flyer" aria-label="View the festival flyer"><span>View</span><b>↓</b></a>
         <div className="art" aria-hidden="true"><div className="halo" /><PhoenixMark /></div>
-        <div className="hero-meta"><span>DATE + LOCATION</span><strong>TO BE REVEALED</strong></div>
+        <div className="hero-meta"><span>DATE + LOCATION</span><strong>MARCH 20–22, 2027 · SUNRISE VALLEY RANCH, TX</strong></div>
       </section>
 
-      <section className="marquee" aria-label="Festival themes"><div>RISE • CREATE • CONNECT • RENEW • RISE • CREATE • CONNECT • RENEW •</div></section>
+      <section className="marquee" aria-label="Festival themes">
+        <div>RISE • CREATE • CONNECT • RENEW • MUSIC • ART • WORKSHOPS • COMMUNITY • SPRING EQUINOX • PYRAMID EVENTS •</div>
+      </section>
+
+      <section className="flyer wrap" id="flyer">
+        <div className="section-kicker">OFFICIAL 2027 FLYER</div>
+        <div className="flyer-grid">
+          <div>
+            <h2>May we regenerate ourselves, thereby regenerating the world.</h2>
+            <p>Rebirth Phoenixfest returns over the spring equinox: March 20–22, 2027 at Sunrise Valley Ranch, TX.</p>
+            <p>The gathering brings together music, art, workshops, and community under the phoenix, the sun and moon, sacred geometry, flame, water, air, and the Pyramid Events symbol.</p>
+          </div>
+          <figure>
+            <Image
+              src="/rebirth-phoenixfest-flyer-2027.png"
+              alt="Rebirth Phoenixfest 2027 flyer with phoenix, elemental symbols, pyramid, sun, moon, fire, music, art, workshops, and community details"
+              width={1054}
+              height={1492}
+              priority
+            />
+          </figure>
+        </div>
+      </section>
 
       <section className="experience wrap" id="experience">
         <div className="section-kicker">THE EXPERIENCE</div>
         <div className="section-intro">
-          <h2>More than a festival.<br /><i>A spark.</i></h2>
-          <p>Built at the meeting point of music, art, and human connection, Phoenixfest is a place to lose track of time—and remember what matters.</p>
+          <h2>Music, art, workshops,<br /><i>and community.</i></h2>
+          <p>Built at the meeting point of ceremony, creative expression, and human connection, Phoenixfest is a place to lose track of time—and remember what matters.</p>
         </div>
         <div className="cards">
           {experiences.map((item) => (
             <article key={item.number}>
-              <span>{item.number}</span><div className="card-icon" aria-hidden="true">✦</div>
+              <span>{item.number}</span><div className="card-icon" aria-hidden="true">{item.icon}</div>
               <h3>{item.title}</h3><p>{item.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="symbols" id="symbols">
+        <div className="wrap symbols-grid">
+          <div>
+            <div className="section-kicker light">THE SYMBOLS</div>
+            <p className="quote">Phoenix fire.<br />Equinox balance.<br />World regeneration.</p>
+          </div>
+          <div className="symbol-list">
+            {symbols.map((symbol) => (
+              <article key={symbol.title}>
+                <span aria-hidden="true">{symbol.mark}</span>
+                <h3>{symbol.title}</h3>
+                <p>{symbol.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -70,23 +145,23 @@ export default function Home() {
           <div className="section-kicker light">WHY REBIRTH?</div>
           <div>
             <p className="quote">“Every ending leaves an ember.<br />Every ember holds a beginning.”</p>
-            <p className="story-copy">Rebirth Phoenixfest began with a simple belief: gathering can change us. We’re creating a space where expression is fearless, difference is celebrated, and everyone has a place around the fire.</p>
+            <p className="story-copy">Rebirth Phoenixfest began with a simple belief: gathering can change us. We are creating a space where expression is fearless, difference is celebrated, and everyone has a place around the fire.</p>
           </div>
         </div>
       </section>
 
-      <section className="updates wrap" id="updates">
-        <span className="tiny">BE FIRST TO KNOW</span>
-        <h2>The fire is<br /><em>just beginning.</em></h2>
-        <p>Lineup, location, tickets, and the first chapter of Phoenixfest are coming soon.</p>
+      <section className="updates wrap" id="tickets">
+        <span className="tiny">MORE INFO & TICKETS</span>
+        <h2>Rebirth-Phoenixfest.org<br /><em>is the portal.</em></h2>
+        <p>March 20–22, 2027. Sunrise Valley Ranch, TX. Follow the fire for ticket updates, lineup announcements, and workshop details.</p>
         <a className="update-button" href="mailto:?subject=Keep%20me%20posted%20about%20Rebirth%20Phoenixfest">Keep me posted <span>↗</span></a>
       </section>
 
       <footer className="wrap">
         <a className="brand" href="#top"><span className="brand-sun" /><span>REBIRTH<br />PHOENIXFEST</span></a>
-        <p>MADE FOR THE BOLD, THE CURIOUS,<br />AND EVERYONE READY TO RISE.</p>
-        <div><a href="#experience">Experience</a><a href="#story">Story</a><a href="#updates">Updates</a></div>
-        <small>© 2026 REBIRTH PHOENIXFEST</small>
+        <p>OVER THE SPRING EQUINOX<br />MARCH 20–22, 2027 · SUNRISE VALLEY RANCH, TX</p>
+        <div><a href="#flyer">Flyer</a><a href="#experience">Experience</a><a href="#symbols">Symbols</a></div>
+        <small>© 2027 REBIRTH PHOENIXFEST · PYRAMID EVENTS</small>
       </footer>
     </main>
   );
